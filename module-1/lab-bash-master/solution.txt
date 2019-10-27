@@ -1,0 +1,62 @@
+Print Hello World in console.
+$echo Hello World
+
+Create a new folder named new_dir.
+$mkdir new_dir
+
+Delete new_dir folder.
+$rm -r new_dir
+
+Make a copy of sed.txt (located in the lorem folder) to lorem-copy.
+From the folder lorem:
+$ cp sed.txt ~/Ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy
+
+Copy the rest of the files located in lorem to lorem-copy using only one code line (tip: use ;).
+From the folfer lorem:
+$ cp -r .  ~/Ironhack/dataptmad1019/module-1/lab-bash-master/lorem-copy
+
+Locate at lorem folder and show sed.txt content.
+$ cat sed.txt
+
+Locate at lorem folder and show at.txt and lorem.txt content.
+$ cat at.txt lorem.txt
+
+Locate at lorem-copy folder and show the first three lines of sed.txt.
+$ head -3 sed.txt
+
+Locate at lorem-copy folder and show the last three lines of sed.txt.
+$ tail -3 sed.txt
+
+Add Homo homini lupus. at the end of sed.txt located at lorem-copy.
+$ echo "Ad homo homini lupus" >> sed.txt
+
+Locate at lorem-copy folder and show the last three lines of sed.txt. Now you should see Homo homini lupus..
+$ tail -3 sed.txt
+
+Change every et to ET in at.txt located at lorem-copy (tip: use sed).
+$ sed -i 's/et/ET/g' at.txt
+
+Find the active user of the system.
+$ w
+
+Find out where are you located within the system.
+$ pwd
+
+List all .txt files located at lorem.
+From lorem folder
+$ find . -type f -name "*.txt"
+
+Count the number of lines in sed.txt located at lorem.
+$ wc -l sed.txt
+
+Count the number of files which name starts with lorem located at the whole lab directory.
+$ find . -type f -name 'lorem*' | wc -l
+
+Find every appearance of et in at.txt located at lorem.
+$ grep -r -i "et" lorem.txt
+
+Find every appearance of the string et in at.txt located at lorem.
+$ grep -r -i "et" lorem.txt
+
+Find every appearance of the string et located at the whole lab directory.
+$ grep -r -i "et" .
