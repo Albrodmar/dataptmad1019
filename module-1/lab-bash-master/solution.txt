@@ -60,3 +60,8 @@ $ grep -r -i "et" lorem.txt
 
 Find every appearance of the string et located at the whole lab directory.
 $ grep -r -i "et" .
+
+
+
+BONUS 2
+$ wc -l `find -type f -name '*.py'`
