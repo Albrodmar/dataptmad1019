@@ -74,7 +74,7 @@ print(f'd_mean: {d_mean}')
 #15. Now we want to label the values in d. First create an empty array "f" with the same shape (i.e. 2x3x5) as d using `np.empty`.
 print('Exercise 15')
 f = np.empty([2,3,5])
-
+print(f)
 
 """
 #16. Populate the values in f. For each value in d, if it's larger than d_min but smaller than d_mean, assign 25 to the corresponding value in f.
@@ -87,9 +87,21 @@ Note: you don't have to use Numpy in this question.
 """
 print('Exercise 16')
 
-for x in np.nditer(d)
-    if d_min < x > d_mean:
+for a in d:
+    for b in a:
+        for c in b:
+            if (c > d_min and c > d_mean):
+                f[] = 25
+            elif (d_mean < c > d_max):
+                f[a, b, c] = 75
+            elif c == d_mean:
+                f[a,b,c] = 50
+            elif c == d_min:
+                f[a,b,c] = 0
+            elif c == d_max:
+                f[a,b,c] = 100
 
+    print(f)
 
 
 """
@@ -115,14 +127,13 @@ array([[[ 75.,  75.,  75.,  25.,  75.],
 
 
 """
-#18. Bonus question: instead of using numbers (i.e. 0, 25, 50, 75, and 100), how to use string values 
+#18. Bonus question: instead of using numbers (i.e. 0, 25, 50, 75, and 100), how to 
+        [ 'B',  'D',   'A',  'D', 'D']]])use string values 
 ("A", "B", "C", "D", and "E") to label the array elements? You are expecting the result to be:
 array([[[ 'D',  'D',  'D',  'B',  'D'],
         [ 'D',  'D',  'B',  'B',  'B'],
         [ 'D',  'B',  'D',  'D',  'D']],
-
        [[ 'B',  'B',  'B',  'B',  'E'],
         [ 'D',  'D',  'D',  'D',  'D'],
-        [ 'B',  'D',   'A',  'D', 'D']]])
 Again, you don't need Numpy in this question.
 """
