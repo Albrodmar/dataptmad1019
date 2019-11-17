@@ -86,22 +86,22 @@ In the end, f should have only the following values: 0, 25, 50, 75, and 100.
 Note: you don't have to use Numpy in this question.
 """
 print('Exercise 16')
-
+list_middle=()                        # create an empty list to append all the results of the "unpacking"
 for a in d:
     for b in a:
-        for c in b:
+        for c in b:                    #unpacking all the 3D array
             if (c > d_min and c > d_mean):
-                f[] = 25
+                list_middle.append(25)
             elif (d_mean < c > d_max):
-                f[a, b, c] = 75
+                list_middle.append(75)
             elif c == d_mean:
-                f[a,b,c] = 50
+                list_middle.append(50)
             elif c == d_min:
-                f[a,b,c] = 0
+                list_middle.append(0)
             elif c == d_max:
-                f[a,b,c] = 100
+                list_middle.append(100)
 
-    print(f)
+    print(list_middle)
 
 
 """
