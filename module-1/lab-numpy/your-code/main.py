@@ -90,18 +90,16 @@ list_middle=[]                        # create an empty list to append all the r
 for a in d:
     for b in a:
         for c in b:             #unpacking all the 3D array
-            if (d_min < c < d_mean):
-               list_middle.append(25)
+             if (d_min < c < d_mean):
+                f[a,b,c] = 25
             elif (d_mean < c < d_max):
-               list_middle.append(75)
+                f[a,b,c] = 75
             elif c == d_mean:
-               list_middle.append(50)
+                f[a,b,c] = 50
             elif c == d_min:
-               list_middle.append(0)
+                f[a,b,c] = 0
             elif c == d_max:
-               list_middle.append(100)
-         
-f = np.reshape(list_middle, (2,3,5))
+                f[a,b,c] = 100
 print(f)
 
 
@@ -138,20 +136,20 @@ array([[[ 'D',  'D',  'D',  'B',  'D'],
         [ 'D',  'D',  'D',  'D',  'D'],
 Again, you don't need Numpy in this question.
 """
-list_middle=[]                        # create an empty list to append all the results of the "unpacking"
+
+
 for a in f:
     for b in a:
         for c in b:             #unpacking all the 3D array
             if (d_min < c < d_mean):
-               list_middle.append('B')
+                f[a,b,c] = 'B'
             elif (d_mean < c < d_max):
-               list_middle.append('D')
+                f[a,b,c] = 'D'
             elif c == d_mean:
-               list_middle.append('C')
+                f[a,b,c] = 'C'
             elif c == d_min:
-               list_middle.append('A')
+                f[a,b,c] = 'A'
             elif c == d_max:
-               list_middle.append('D')
+                f[a,b,c] = 'D'
          
-f = np.reshape(list_middle, (2,3,5))
 print(f)
