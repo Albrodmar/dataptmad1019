@@ -46,11 +46,14 @@ LIMIT 3
 
 -- Challenge 4
 
-SELECT titleauthor.au_id AS 'AUTHOR ID', authors.au_lname AS 'LAST NAME', authors.au_fname 'FIRS NAME', SUM (sales.qty) AS 'TOTAL'
+SELECT titleauthor.au_id AS 'AUTHOR ID', authors.au_lname AS 'LAST NAME', authors.au_fname 'FIRS NAME', IFNULL (SUM (sales.qty),0) AS 'TOTAL'
 FROM authors
 LEFT JOIN titleauthor ON authors.au_id=titleauthor.au_id
 LEFT JOIN sales ON titleauthor.title_id = sales.title_id
-GROUP BY titleauthor.au_id
+GROUP BY authors.au_id
 ORDER BY SUM(sales.qty) DESC
+
+----
+
 
 
