@@ -86,22 +86,23 @@ In the end, f should have only the following values: 0, 25, 50, 75, and 100.
 Note: you don't have to use Numpy in this question.
 """
 print('Exercise 16')
-list_middle=()                        # create an empty list to append all the results of the "unpacking"
+list_middle=[]                        # create an empty list to append all the results of the "unpacking"
 for a in d:
     for b in a:
-        for c in b:                    #unpacking all the 3D array
-            if (c > d_min and c > d_mean):
-                list_middle.append(25)
-            elif (d_mean < c > d_max):
-                list_middle.append(75)
+        for c in b:             #unpacking all the 3D array
+            if (d_min < c < d_mean):
+               list_middle.append(25)
+            elif (d_mean < c < d_max):
+               list_middle.append(75)
             elif c == d_mean:
-                list_middle.append(50)
+               list_middle.append(50)
             elif c == d_min:
-                list_middle.append(0)
+               list_middle.append(0)
             elif c == d_max:
-                list_middle.append(100)
-
-    print(list_middle)
+               list_middle.append(100)
+         
+f = np.reshape(list_middle, (2,3,5))
+print(f)
 
 
 """
@@ -124,7 +125,7 @@ array([[[ 75.,  75.,  75.,  25.,  75.],
         [ 75.,  75.,  75.,  75.,  75.],
         [ 25.,  75.,   0.,  75.,  75.]]])
 """
-
+#not quite the same solution as expected because I did not append the results into f but instead create a new list
 
 """
 #18. Bonus question: instead of using numbers (i.e. 0, 25, 50, 75, and 100), how to 
@@ -137,3 +138,20 @@ array([[[ 'D',  'D',  'D',  'B',  'D'],
         [ 'D',  'D',  'D',  'D',  'D'],
 Again, you don't need Numpy in this question.
 """
+list_middle=[]                        # create an empty list to append all the results of the "unpacking"
+for a in f:
+    for b in a:
+        for c in b:             #unpacking all the 3D array
+            if (d_min < c < d_mean):
+               list_middle.append('B')
+            elif (d_mean < c < d_max):
+               list_middle.append('D')
+            elif c == d_mean:
+               list_middle.append('C')
+            elif c == d_min:
+               list_middle.append('A')
+            elif c == d_max:
+               list_middle.append('D')
+         
+f = np.reshape(list_middle, (2,3,5))
+print(f)
