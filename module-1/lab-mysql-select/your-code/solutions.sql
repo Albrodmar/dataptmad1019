@@ -53,7 +53,17 @@ LEFT JOIN sales ON titleauthor.title_id = sales.title_id
 GROUP BY authors.au_id
 ORDER BY SUM(sales.qty) DESC
 
-----
+---- Bonus Challenge - Most Profiting Authors
+
+SELECT titleauthor.au_id, authors.au_lname, authors.au_fname,SUM(((titleauthor.royaltyper*titles.royalty)/100)+((titles.advance*titleauthor.royaltyper)/100)) AS 'Profits'
+FROM titleauthor
+JOIN titles ON titleauthor.title_id = titles.title_id
+JOIN sales ON titles.title_id = sales.title_id
+JOIN authors ON titleauthor.au_id = authors.au_id
+GROUP BY titleauthor.au_id
+ORDER BY SUM(((titleauthor.royaltyper*titles.royalty)/100)+((titles.advance*titleauthor.royaltyper)/100)) DESC
+LIMIT 3
+
 
 
 
