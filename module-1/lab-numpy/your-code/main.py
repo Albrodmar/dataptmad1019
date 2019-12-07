@@ -1,5 +1,5 @@
 #1. Import the NUMPY package under the name np.
-
+import numpy as np
 
 
 #2. Print the NUMPY version and the configuration.
@@ -97,18 +97,4 @@ array([[[ 75.,  75.,  75.,  25.,  75.],
        [[ 25.,  25.,  25.,  25., 100.],
         [ 75.,  75.,  75.,  75.,  75.],
         [ 25.,  75.,   0.,  75.,  75.]]])
-"""
-
-
-"""
-#18. Bonus question: instead of using numbers (i.e. 0, 25, 50, 75, and 100), how to use string values 
-("A", "B", "C", "D", and "E") to label the array elements? You are expecting the result to be:
-array([[[ 'D',  'D',  'D',  'B',  'D'],
-        [ 'D',  'D',  'B',  'B',  'B'],
-        [ 'D',  'B',  'D',  'D',  'D']],
-
-       [[ 'B',  'B',  'B',  'B',  'E'],
-        [ 'D',  'D',  'D',  'D',  'D'],
-        [ 'B',  'D',   'A',  'D', 'D']]])
-Again, you don't need Numpy in this question.
 """
