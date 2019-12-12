@@ -8,7 +8,7 @@ expects.
 The code is very long and messy. Refactor it according to what you have learned about
 code simplicity and efficiency.
 """
-
+'''
 print('Welcome to this calculator!')
 print('It can add and subtract whole numbers from zero to five')
 a = input('Please choose your first number (zero to five): ')
@@ -167,3 +167,22 @@ if (not a == 'zero' and not a == 'one' and not a == 'two' and not a == 'three' a
     print("I am not able to answer this question. Check your input.")
 
 print("Thanks for using this calculator, goodbye :)")
+
+my code
+'''
+
+print('Welcome to this calculator!')
+print('It can add and subtract whole numbers from zero to five')
+a = input('Please choose your first number (zero to five): ')
+b = input('What do you want to do? plus or minus: ')
+c = input('Please choose your second number (zero to five): ')
+
+dic = {'zero':0, 'one':1, 'two':2, 'three':3, 'four':4, 'five':5, 'minus':'-', 'plus':'+'}
+
+def calculator (a):
+    try: (f'{a} {dic.get(b)} {c} =')
+    return (f'{a} {dic.get(b)} {c} =')
+    except:
+    return ('I am not able to answer this question. Check your input.')
+
+print(calculator(a))
