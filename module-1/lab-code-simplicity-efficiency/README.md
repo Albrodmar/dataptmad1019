@@ -4,7 +4,7 @@
 
 ## Introduction
 
-In the lesson we have learn a lot of principles and techniques about how to make codes simple and efficient. But it takes a lot of effort to achieve true code simplicity and efficiency. Below are several tips useful for you:
+In the  lesson we have learn a lot of principles and techniques about how to make codes simple and efficient. But it takes a lot of effort to achieve true code simplicity and efficiency. Below are several tips useful for you:
 
 * Read a lot of source code from community websites such as GitHub and Stack Overview. Learn how top programmers write simple and efficient codes.
 
