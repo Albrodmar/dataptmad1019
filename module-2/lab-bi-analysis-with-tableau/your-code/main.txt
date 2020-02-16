@@ -1,1 +1,2 @@
-https://public.tableau.com/views/lab-bi-analysis-with-tableau_15817480820820/Demographic?:display_count=y&:origin=viz_share_link
+Could find my final proyect in this URL:
+https://public.tableau.com/profile/alberto.rodriguez1792#!/vizhome/lab-bi-analysis-with-tableau_15817480820820/Churn
